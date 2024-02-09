@@ -21,6 +21,10 @@ body{
   padding: 25px 120px ;
   width: 100%;
 }
+
+.nav h1{
+  cursor: pointer;
+}
 .logo{
   font-family: 'Corben', serif;
   font-weight: 700;
@@ -282,6 +286,8 @@ p{
 
 }
 
+
+
 .box:active{
   box-shadow: none;
   transform: translateY(8px);
@@ -326,21 +332,19 @@ p{
   background-color: #fec447;
   width: 100%;
   display: flex;
-  /* justify-content: space-between; */
-  padding:  50px;
-  padding-bottom: 90px;
+  padding-right:  50px;
+  padding-top:  30px;
+  padding-bottom: 10px;
 }
 
 .left{
   width: 50%;
-
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .left img{
-  width: 80%;
+  width:75%;
 }
 .right{
   width: 50%;
@@ -387,7 +391,6 @@ p{
   padding: 85px 160px ;
   flex-direction: column;
 }
-
 .top{
   width: 35%;
   display: flex;
@@ -401,7 +404,8 @@ p{
 }
 
 .top p{
-  padding-top: 25px
+  padding-top: 25px;
+  padding-bottom: 80px;
 }
 
 .pointer{
@@ -414,12 +418,26 @@ p{
 
 .projectInfo{
   width: 100%;
-  padding:80px 0px;
   display: flex;
+  margin-bottom: 15vh;
+}
+
+.info{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.l{
+  margin-left: 150px;
+}
+
+.r{
+  margin-right: 150px;
 }
 
 .tagBtn{
-  background-color:#9bd3d0;
   padding: 12px;
   margin-bottom: 10px;
   border-radius: 20px;
@@ -428,9 +446,18 @@ p{
   font-weight: bold;
 }
 
-.info{
-  width: 50%;
+.design .tagBtn{
+  background-color:#9bd3d0;
 }
+
+.front .tagBtn{
+  background-color:#feccb3;
+}
+
+.back .tagBtn{
+  background-color: #fec447;
+}
+
 
 .info h2{
   font-size: 28px;
@@ -441,36 +468,212 @@ p{
   font-size: 18px;
   line-height: 28px;
 }
+
 .showCase{
   width: 50%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+}
+
+.parentContainer{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.sr{
+  display: flex;
+  justify-content:left;
+
+}
+.sl{
+  display: flex;
+  justify-content: flex-start;
 }
 
 .card{
+  transition: all 0.3s;
   width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
   border-radius: 10px;
-  /* background-color:#6fa6ba; */
   margin-bottom: 20px;
 }
+
+.shadow{
+  display: flex;
+  width: 80%;
+  height:100%;
+  position: absolute;
+  border-radius: 10px;
+  left: 25px;
+  top: 15px;
+  border: 2px solid #373737;
+  z-index: -1;
+}
+.design .shadow{
+  background-color:#9bd3d0;
+}
+.front .shadow{
+  background-color:#feccb3;
+}
+
+.back .shadow{
+  background-color: #fec447;
+}
+
 .card img{
   width: 100%;
   border-radius: 10px;
-  border: 2px solid #141435;
+  border: 2px solid #373737;
   position: relative;
-  /* box-shadow: 40px 40px #9bd3d0; */
 }
 
-.card::after{
+
+.projectBtn{
+  margin-top: 25px;
+  height: 50px;
+  border: 0.12rem solid #373737;
+  padding: 10px 20px;
+  background-color: #fcf6e8;
+  border-radius:25px;
+  font-family: 'Sora', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.allProj{
   width: 100%;
-  height: 300px;
-  background-color:#6fa6ba ;
+  display: flex;
+  justify-content: center;
+}
+.projectBtn img{
+  transform: rotate(-90deg);
+  scale: 0.65;
+}
+
+.feedback{
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+  flex-direction: column;
+  padding-bottom: 150px;
+  background-color: #9bd3d0;;
+}
+.sec{
+  padding-left:120px ;
+  width: 100%;
+  display: flex;
+
+} 
+
+.line img{
+  width: 74%;
+  display: flex;
+  margin-top: 25px;
+}
+
+.wide{
+  width: 60%;
+  display: flex;
+  padding-bottom: 80px;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.wide h1{
+  font-size: 3.1rem;
+}
+
+.WbBox{
+  width: 100%;
+  height: 70%;
+  padding-top:5px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  position: relative;
+  /* background-color: #646665; */
+}
+
+.Wbox{
+  width: 60%;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  margin-right: 15px; 
+  padding: 55px;
+  background-color: #fbd6bc;
+  border-radius: 10px;
+  border: 2px solid #141435;
+  /* position: relative; */
+}
+
+.envelope{
+  background-color: #fec447;
+  width: 100%;
+  height: 100%;
   position: absolute;
+  z-index: 0;
+  display: flex;
+  top: 50px;
+
+}
+
+
+
+.Wbox:hover{
+  box-shadow:5px 5px 5px #646665;
+
+}
+.far{
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+}
+
+.far img{
+  width: 97%;
+}
+
+.line{
+  display: flex;
+  bottom: 15px;
+  margin-bottom: 15px;
+  position:relative;
+}
+
+.line img{
+  position: absolute;
+  top: -50px;
+  left: 5px;
+}
+
+
+/* LOGIN PAGE STYLING */
+.base{
+  background-color: #141435;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  padding: 0;
+}
+
+.side{
+  width: 80%;
+  height: 80%;
+  border: 2px solid #fcf6e8 ;
 }
 
 

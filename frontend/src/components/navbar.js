@@ -1,10 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../index.css'
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const handlehome = () => {  
+    navigate("/");
+  }
+  const handlelogin = () => {  
+    navigate("/login");
+  }
   return (
     <div className='nav'>
-        <h1 className='logo'>NeoByte</h1>
+        <h1 className='logo' onClick={handlehome}>NeoByte</h1>
         <div className='links'>
             <ul className='list'>
                 <li className="navLinks active">Home</li>
@@ -14,7 +22,7 @@ const Navbar = () => {
             </ul>
         </div>
         <div>
-            <button className='btn'>Login</button>
+            <button className='btn' onClick={handlelogin}>Login</button>
         </div>
       
     </div>

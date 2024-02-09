@@ -4,9 +4,9 @@ import p2 from "../assets/profile2.png";
 import tag from "../assets/tag.png";
 import btn from "../assets/btn.png";
 import pointer from '../assets/arrow.png'
-import Desc from "../components/desc";
+import Desc from "./desc";
 
-const Home = () => {
+const Main = () => {
   return (
     <>
     <div className="main">
@@ -43,4 +43,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Main;
