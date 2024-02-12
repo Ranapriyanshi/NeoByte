@@ -72,8 +72,7 @@ const Project = () => {
           <button className="tagBtn">E-Commerce</button>
           <h2>E-Commerce Project Title</h2>
           <p>
-            Ornate is a design sharing platforn build for the buding design to
-            come forward and shae thier ecperiences with the world.
+            We know how to make your product stand out in the market. We have the best team to help your business flourish abd grow.
           </p>
           <button className="projectBtn">
             See Full Project <img src={goo} alt="" />
