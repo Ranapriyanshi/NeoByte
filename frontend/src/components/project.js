@@ -14,7 +14,7 @@ const Project = () => {
         <div>
           <h1>
             See our Projects
-            <img src={pointer} alt="" srcset="" className="pointer" />
+            <img src={pointer} alt="" srcSet="" className="pointer" />
           </h1>
         </div>
         <p>

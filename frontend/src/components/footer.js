@@ -13,8 +13,8 @@ const Footer = () => {
             <h1>NeoByte</h1>
           </div>
           <p>
-            We help most exciting brads unlock grouwth through meticulousl
-            crafted paid media campaigns and digital experiences.
+            We help most exciting brands unlock grouwth through meticulously
+            crafted media campaigns and digital experiences.
           </p>
         </div>
         <div className="second">
@@ -23,7 +23,7 @@ const Footer = () => {
               <b>Products</b>
             </h2>
             <h3>Overview</h3>
-            <h3>Maarketplace</h3>
+            <h3>Marketplace</h3>
             <h3>Workers</h3>
           </div>
           <div>
@@ -49,7 +49,7 @@ const Footer = () => {
       <div className="bottomDiv">
         <hr />
         <div>
-          <p>©Priyanshi Rana. All Right Reseved</p>
+          <p>©Priyanshi Rana. All Rights Reseved</p>
           <img src={social} alt="" />
 
         </div>

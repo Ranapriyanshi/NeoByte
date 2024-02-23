@@ -12,6 +12,11 @@ body {
   color: #141435;
 }
 
+button {
+  font-family: "Sora", sans-serif;
+  cursor: pointer;
+}
+
 /* Navbar Styling */
 .nav {
   display: flex;
@@ -33,6 +38,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 
 .logo img {
@@ -57,6 +63,7 @@ body {
   text-decoration: none;
   color: #141435;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .active {
@@ -676,7 +683,7 @@ p {
 
 .contact {
   width: 100%;
-  padding: 90px 160px 60px 160px;
+  padding: 90px 120px 60px 120px;
   display: flex;
   flex-direction: column;
   background-color: #464846;
@@ -821,6 +828,13 @@ p {
   font-size: 0.98rem;
   color: #fcf6e8;
 }
+
+.form_contain hr {
+  width: 80%;
+  border: 1px solid #141435;
+  border-radius: 5px;
+  margin: 20px 0px;
+}
 .bottomDiv hr {
   width: 100%;
   border: 1px solid #fbfbf8;
@@ -850,17 +864,17 @@ p {
   font-weight: bolder;
 }
 
-.description p{
+.description p {
   color: #6f6969;
 }
-.form{
+.form {
   width: 100%;
   margin: 50px 0px 15px 0px;
   display: flex;
   flex-direction: column;
 }
 
-.inputFeild{
+.inputFeild {
   border-radius: 10px;
   width: 100%;
   height: 16vh;
@@ -870,56 +884,55 @@ p {
   border: 2px solid #a3a3a3;
 }
 
-.inputFeild div{
-  padding:0 20px;
+.inputFeild div {
+  padding: 0 20px;
   height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#active{
+#active {
   border-left: 4px solid #141435;
-
 }
-#notActive{
+#notActive {
   border-left: 4px solid #fcf6e8;
 }
 
-.inputFeild div label{
+.inputFeild div label {
   font-size: 1.1rem;
   font-weight: bolder;
   color: #6f6969;
 }
-.inputFeild div p{
+.inputFeild div p {
   font-size: 1.1rem;
   font-weight: bolder;
   /* color: #6f6969; */
 }
-.inputFeild div input{
-  height:40%;
+.inputFeild div input {
+  height: 40%;
   background-color: #fcf6e8;
   border: none;
 }
 
-.actions{
+.actions {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.actions div{
+.actions div {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-.actions button{
+.actions button {
   color: #6f6969;
   border: none;
   background-color: #fcf6e8;
   font-size: 0.9rem;
   font-family: "Sora", sans-serif;
 }
-.done{
+.done {
   color: #fcf6e8;
   padding: 40px 0px 30px 0px;
   display: flex;
@@ -929,7 +942,7 @@ p {
   align-items: center;
 }
 
-.done button{
+.done button {
   border-radius: 10px !important;
   font-size: 0.9rem;
   font-weight: bolder;
@@ -939,14 +952,13 @@ p {
   /* padding: 0px 115px!important; */
 }
 
-#v2{
+#v2 {
   color: #141435;
   background-color: #fcf6e8;
   border: 2px solid #141435;
 }
 
-
-.sso{
+.sso {
   width: 100%;
   display: flex;
   align-items: center;
@@ -954,7 +966,7 @@ p {
   margin: 15px 0px;
 }
 
-.ssoParent{
+.ssoParent {
   width: 100%;
   display: flex;
   position: relative;
@@ -963,9 +975,8 @@ p {
   border-radius: 10px;
   background-color: #f3c2cc;
   /* box-shadow: 2px 2px 2px rgb(146, 145, 145); */
-  
 }
-.ssoChild{
+.ssoChild {
   gap: 5px;
   border: 2px solid #141435;
   padding: 2px 2px;
@@ -979,10 +990,13 @@ p {
   position: absolute;
   top: -4px;
   left: -4px;
-
 }
 
-.ssoChild img{
+.ssoChild h4 {
+  font-weight: normal;
+}
+
+.ssoChild img {
   width: 18px;
 }
 .fat {
@@ -1067,4 +1081,220 @@ p {
 #III {
   margin-right: 25%;
   background-color: #fee5c9;
+}
+
+/* CONTACT PAGE STYLING */
+.contactPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fcf6e8;
+  color: #4f4f4f !important;
+}
+
+.form_contain {
+  width: 100%;
+  padding: 30px 0;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.input_form {
+  border-radius: 25px;
+  width: 35%;
+  background-color: #fff;
+  box-shadow: inset 2.30px 3.98px 6.28px -0.79px rgba(171, 171, 171, 0.15),
+  inset -3.45px -5.98px 6.28px -0.79px rgba(171, 171, 171, 0.3),
+  6.90px 11.95px 4.71px -2.36px rgba(171, 171, 171, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 45px 25px 65px 25px;
+  gap: 8px;
+}
+
+.input_form h2 {
+  padding: 10px 0px 10px 0px;
+}
+
+.input_form p {
+  font-weight: lighter;
+  font-size: 1.1rem;
+  width: 80%;
+  color: #4f4f4f !important;
+}
+
+.input_form button {
+  padding: 15px 85px;
+  border: none;
+  background-color: #f8d382;
+  border-radius: 10px;
+  box-shadow: -8px -8px 16px inset #e39c02, 6px 6px 12px inset #eeb539;
+}
+
+.query {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:30px 25px;
+  gap: 20px;
+}
+
+.name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.name_input {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.name_input label {
+  font-weight: lighter;
+  font-size: 1rem;
+  padding-left: 5px;
+  color: #4f4f4f !important;
+}
+
+.query input,
+textarea {
+  border: none;
+  padding: 15px 25px;
+  background-color: #fff;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: inset 2.86px 2.51px 5.36px -0.67px rgba(209, 209, 209, 0.15),
+  inset -4.29px -3.76px 5.36px -0.67px rgba(209, 209, 209, 0.3),
+  8.57px 7.52px 4.02px -2.01px rgba(209, 209, 209, 0.6);
+}
+
+.msg {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.response {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px 80px 0;
+  gap: 30px;
+  /* background-color: yellow; */
+}
+
+.detail_parent {
+  width: 33%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 0px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.6s;
+}
+
+.detail_parent h3 {
+  font-weight: bold;
+  color: #4f4f4f;
+  width: 90%;
+  z-index: 2;
+}
+
+.us {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  transition: all 0.6s;
+}
+
+.us img {
+  height: 60%;
+  filter: invert(1);
+}
+
+img {
+  transition: 0.6s ease all;
+  object-fit: cover;
+}
+.us {
+  transition: 0.6s ease all;
+}
+#ba1,
+#ba2,
+#ba3 {
+  transition: 0.6s ease all;
+}
+.detail_parent:hover img {
+  transform: scale(1.1);
+}
+.detail_parent:hover .us {
+  transform: scale(1.12);
+}
+.detail_parent:hover #ba1 {
+  transform: scale(1.1);
+  box-shadow: inset 6.82px 7.31px 14.13px -1.77px rgb(132 123 112 / 15%),
+    inset -10.23px -10.97px 14.13px -1.77px rgb(9 5 0 / 30%),
+    20.47px 31.93px 80.6px 45.3px #e1d9ff,
+    -10.47px -1.93px 30.6px 10.3px #e5deff;
+}
+.detail_parent:hover #ba2 {
+  transform: scale(1.15);
+  box-shadow: inset 6.82px 7.31px 14.13px -1.77px rgb(132 123 112 / 15%),
+    inset -10.23px -10.97px 14.13px -1.77px rgb(9 5 0 / 30%),
+    20.47px 31.93px 80.6px 45.3px #ffe0e6,
+    -10.47px -1.93px 30.6px 10.3px #f6d3da;
+}
+.detail_parent:hover #ba3 {
+  box-shadow: inset 6.82px 7.31px 14.13px -1.77px rgb(132 123 112 / 15%),
+    inset -10.23px -10.97px 14.13px -1.77px rgb(9 5 0 / 30%),
+    20.47px 31.93px 80.6px 45.3px #fadcc6,
+    -10.47px -1.93px 30.6px 10.3px #fadcc6;
+}
+#ba1 {
+  background-color: #b1a1f1;
+  box-shadow: inset 6.82px 7.31px 14.13px -1.77px rgb(132 123 112 / 15%),
+    inset -10.23px -10.97px 14.13px -1.77px rgb(9 5 0 / 30%),
+    20.47px 21.93px 30.6px -5.3px rgb(145 142 142 / 60%),
+    -10.47px -10.93px 30.6px -5.3px rgb(187 180 180 / 60%);
+}
+#ba2 {
+  background-color: #efa6b5;
+  box-shadow: inset 6.82px 7.31px 14.13px -1.77px rgb(132 123 112 / 15%),
+    inset -10.23px -10.97px 14.13px -1.77px rgb(9 5 0 / 30%),
+    20.47px 21.93px 30.6px -5.3px rgb(145 142 142 / 60%),
+    -10.47px -10.93px 30.6px -5.3px rgb(187 180 180 / 60%);
+}
+#ba3 {
+  background-color: #f2b589;
+  box-shadow: inset 6.82px 7.31px 14.13px -1.77px rgb(132 123 112 / 15%),
+    inset -10.23px -10.97px 14.13px -1.77px rgb(9 5 0 / 30%),
+    20.47px 21.93px 30.6px -5.3px rgb(145 142 142 / 60%),
+    -10.47px -10.93px 30.6px -5.3px rgb(187 180 180 / 60%);
 }

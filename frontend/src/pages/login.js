@@ -61,7 +61,7 @@ const Login = () => {
         <div className="sso">
           <div className="ssoParent" style={{backgroundColor:"#f3c2cc"}}>
             <div className="ssoChild">
-              <h>Continue with Google</h>
+              <h4>Continue with Google</h4>
               <img src={google} alt="" />
             </div>
           </div>
@@ -69,7 +69,7 @@ const Login = () => {
         <div className="sso" >
           <div className="ssoParent" style={{backgroundColor:"#e0d8ff"}}>
             <div className="ssoChild">
-              <h>Continue with LinkedIn</h>
+              <h4>Continue with LinkedIn</h4>
               <img src={linkedin} alt="" />
             </div>
           </div>
@@ -77,7 +77,7 @@ const Login = () => {
         <div className="sso" >
           <div className="ssoParent" style={{backgroundColor:"#fee5c9"}}>
             <div className="ssoChild">
-              <h>Continue with Github</h>
+              <h4>Continue with Github</h4>
               <img src={github} alt="" />
             </div>
           </div>
