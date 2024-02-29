@@ -2,6 +2,9 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../index.css";
+// import home from "../assets/home.png";
+// import dashboard from "../assets/dashboard.png";
+// import profile from "../assets/profile.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -17,6 +20,9 @@ const Navbar = () => {
   const handlelogin = () => {
     navigate("/login");
   };
+  // const handleDashboard = () => {
+  //   navigate("/dashboard");
+  // };
 
   const paths = [
     { name: "Home", path: "/" },
@@ -45,10 +51,15 @@ const Navbar = () => {
           })}
         </ul>
       </div>
-      <div>
+      <div className="userPresnt">
         <button className="btn" onClick={handlelogin}>
           Login
         </button>
+        {/* <img src={profile} alt="" /> */}
+        {/* <button className="startedBtn" id="profileBtn" onClick={handleDashboard}>
+          <img src={dashboard} alt="" />
+          Dashboard
+        </button> */}
       </div>
     </div>
   );

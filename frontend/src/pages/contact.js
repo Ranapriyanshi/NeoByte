@@ -15,7 +15,7 @@ const Contact = () => {
           <div className="input_form">
             <h2>Connect with us!</h2>
             <p>
-              Please you details below and we will reach out to you as quick as
+              Please fill your details below and we will reach out to you as quick as
               possible.
             </p>
             <div className="query">
