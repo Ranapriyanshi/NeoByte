@@ -1460,10 +1460,16 @@ img {
 /* SERVICES PAGE STYLING */
 .services {
   width: 100%;
-  padding: 0px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  padding: 0px 40px;
+  width: 100%;
 }
 
 .head {
@@ -1477,7 +1483,7 @@ img {
   justify-content: space-between;
 }
 
-.tagLine{
+.tagLine {
   width: 60%;
   display: flex;
   justify-content: center;
@@ -1487,30 +1493,30 @@ img {
   gap: 10px;
 }
 
-.tagLine h1{
+.tagLine h1 {
   font-size: 3rem;
 }
 
-.tagLine p{
+.tagLine p {
   font-size: 1.4rem;
   line-height: 1.3;
 }
 
-.demoImg{
+.demoImg {
   width: 30%;
   display: flex;
   justify-content: flex-end;
 }
 
-.demoImg img{
+.demoImg img {
   width: 70%;
 }
 
-.demo{
+.demo {
   margin: 25px 0px;
 }
 
-.demo img{
+.demo img {
   transform: rotate(0deg);
 }
 
@@ -1539,12 +1545,12 @@ img {
   font-size: 0.2rem;
 }
 
-.pebble{
+.pebble {
   width: 15% !important;
   margin-right: 15px;
 }
 
-.ellaboration{
+.ellaboration {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1553,21 +1559,21 @@ img {
   padding: 60px 0px 60px 0px;
 }
 
-.serviceDetail{
-  padding:0px 0px 50px 0px !important;
+.serviceDetail {
+  padding: 0px 0px 50px 0px !important;
 }
 
-.serviceDetail h1{
+.serviceDetail h1 {
   padding-bottom: 0px !important;
 }
 
-.serviceDetail p{
+.serviceDetail p {
   max-width: 60%;
   padding-bottom: 0px !important;
   color: #6f6969;
 }
 
-.horizontal{
+.horizontal {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1576,7 +1582,7 @@ img {
 }
 /* .horizontal div{ width: 33%;} */
 
-.leftContent{
+.leftContent {
   width: 35%;
   height: 100%;
   display: flex;
@@ -1585,13 +1591,13 @@ img {
   text-align: end;
 }
 
-.leftContent h3{
-  text-align:end;
+.leftContent h3 {
+  text-align: end;
   width: 100%;
   padding: 0px 0px 10px 0px;
-  margin-top: 3vh ;
+  margin-top: 3vh;
 }
-.rightContent{
+.rightContent {
   display: flex;
   width: 35%;
   height: 100%;
@@ -1600,21 +1606,21 @@ img {
   text-align: start;
 }
 
-.rightContent h3{
-  text-align:start;
+.rightContent h3 {
+  text-align: start;
   width: 100%;
   padding: 0px 0px 10px 0px;
   margin-top: 3vh;
 }
 
-.bubbles{
+.bubbles {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap:8vh;
+  gap: 8vh;
 }
-.alternateUs{
+.alternateUs {
   height: 140px !important;
   width: 140px !important;
   display: flex;
@@ -1624,18 +1630,40 @@ img {
   padding: 50px 0px;
 }
 
-.alternateUs img{
+.alternateUs img {
   scale: 2.8;
 }
-.ready{
-  padding: 60px 70px;
-  gap: 25px;
+.ready {
+  width: 100%;
+  padding: 0px 0px 0px 70px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.ready div{
+.headTitle {
+  width: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 15px;
+  font-size: 1.2rem;
+  padding: 40px 0px;
+}
+.userActions {
+  width: 100%;
+  display: flex;
   align-items: center;
   gap: 20px;
 }
 
+.userActions button img{
+  transform: rotate(0deg);
+}
+.thinking {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.thinking img {
+  width: 90%;
+}
