@@ -62,7 +62,7 @@ button {
 .navLinks {
   text-decoration: none;
   color: #141435;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   cursor: pointer;
 }
 
@@ -94,7 +94,7 @@ button {
   border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   text-decoration: none;
   height: 50px;
   display: flex;
@@ -103,12 +103,17 @@ button {
   font-family: "Sora", sans-serif;
   letter-spacing: 2px;
 }
+#btn2{
+  background-color: #fcf6e8;
+  color: #141435 !important;
+  border:2px solid #141435 !important;
+}
 
 .userPresnt {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .userPresnt img {
@@ -141,6 +146,10 @@ button {
   padding-left: 25px;
 }
 
+.tag button img{
+  transform: rotate(0deg);
+}
+
 .startedBtn {
   padding: 10px 20px;
   border-radius: 15px;
@@ -150,7 +159,6 @@ button {
   font-weight: 700;
   text-decoration: none;
   font-family: "Sora", sans-serif;
-  background-color: #fec447;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -1353,7 +1361,6 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   padding: 10px 0px 80px 0;
   gap: 30px;
 }
@@ -1464,7 +1471,7 @@ img {
   flex-direction: column;
 }
 
-.section {
+.servicesSection {
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -1509,7 +1516,7 @@ img {
 }
 
 .demoImg img {
-  width: 70%;
+  width: 75%;
 }
 
 .demo {
@@ -1635,21 +1642,24 @@ img {
 }
 .ready {
   width: 100%;
-  padding: 0px 0px 0px 70px;
+  padding: 0px 0px 0px 150px;
   display: flex;
   justify-content: space-between;
 }
 
 .headTitle {
-  width: 50%;
+  align-items: center;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   gap: 15px;
   font-size: 1.2rem;
   padding: 40px 0px;
 }
 .userActions {
+  justify-content: center;
   width: 100%;
   display: flex;
   align-items: center;
@@ -1665,5 +1675,87 @@ img {
   justify-content: flex-end;
 }
 .thinking img {
+  width: 70%;
+}
+
+.prices{
+  width: 100%;
+  flex-direction: column;
+  padding: 40px 120px 40px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introPrice{
   width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.introPrice h1{
+  font-size: 2.5rem;  
+} 
+
+.introPrice p{
+  color: #6f6969;
+  width: 70%;
+}
+
+.selected :hover{
+  border: 2px solid #141435;
+  cursor: pointer;
+
+}
+
+.details .detail_parent :hover{
+  border: none !important;
+}
+
+.faqs{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 120px 40px 120px;
+  gap: 5px;
+}
+
+.questsSet{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0px;
+  gap: 50px;
+}
+
+.quest{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  border-bottom: 1px solid #6f6969;
+  transition: all 0.8 !important;
+}
+
+.show{
+  display: flex;
+}
+
+.hide{
+  display: none;
+}
+
+#show{
+  transition: all 0.1 !important;
+  transform: rotate(-90deg);
+}
+
+#hide{
+  transition: all 0.1 !important;
+  transform: rotate(90deg);
 }

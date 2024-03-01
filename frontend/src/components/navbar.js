@@ -26,8 +26,8 @@ const Navbar = () => {
 
   const paths = [
     { name: "Home", path: "/" },
-    { name: "Project", path: "/project" },
     { name: "Services", path: "/services" },
+    { name: "Pricing", path: "/pricing" },
     { name: "Contact", path: "/contact" },
   ];
   return (
@@ -52,8 +52,11 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="userPresnt">
-        <button className="btn" onClick={handlelogin}>
+        <button className="btn" id="btn2" onClick={handlelogin}>
           Login
+        </button>
+        <button className="btn" onClick={handlelogin}>
+          Get Started
         </button>
         {/* <img src={profile} alt="" /> */}
         {/* <button className="startedBtn" id="profileBtn" onClick={handleDashboard}>

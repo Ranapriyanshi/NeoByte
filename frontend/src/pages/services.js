@@ -71,7 +71,7 @@ const Services = () => {
     <div>
       <Navbar />
       <div className="services">
-        <div className="section">
+        <div className="servicesSection">
           <div className="head">
             <div className="tagLine">
               <h1>

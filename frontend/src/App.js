@@ -6,7 +6,7 @@ import Login from "./pages/login";
 import SignUp from "./pages/signup";
 import Contact from "./pages/contact";
 import Services from "./pages/services";
-import Project from "./pages/project";
+import Pricing from "./pages/pricing";
 import Dashboard from "./pages/dashboard";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/signup" element={<SignUp />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/services" element={<Services />} />
-          <Route exact path="/project" element={<Project />} />
+          <Route exact path="/pricing" element={<Pricing />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>

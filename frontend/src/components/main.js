@@ -17,7 +17,7 @@ const Main = () => {
         <p className="p">
           An agency is a business, firm or organisation that provides Services
         </p>
-        <button className="startedBtn" > Get Started <img src={btn} alt="" className="arrow"/></button>
+        <button className="uniProj uniProj--stripe" > Book a Demo <img src={btn} alt="" className="arrow"/></button>
       </div>
       <div className="pImgsec">
         <div className="container c1">
