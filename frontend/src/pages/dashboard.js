@@ -1,10 +1,15 @@
 import React from 'react'
+import Navbar from '../components/navbar'
+import Footer from '../components/footer'
 
 const Dashboard = () => {
   return (
-    <div>
+    <motion.div>
+      <Navbar/>
       
-    </div>
+      <Footer />
+      
+    </motion.div>
   )
 }
 

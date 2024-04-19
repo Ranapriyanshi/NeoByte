@@ -103,10 +103,10 @@ button {
   font-family: "Sora", sans-serif;
   letter-spacing: 2px;
 }
-#btn2{
+#btn2 {
   background-color: #fcf6e8;
   color: #141435 !important;
-  border:2px solid #141435 !important;
+  border: 2px solid #141435 !important;
 }
 
 .userPresnt {
@@ -125,28 +125,32 @@ button {
 .main {
   width: 100%;
   display: flex;
-  padding-top: 50px;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
   padding-left: 120px;
-  padding-right: 120px;
 }
 
 .tag {
-  width: 45%;
+  width: 60%;
   font-size: 45px;
   font-weight: 900;
+  gap: 20px;
+  margin-top: 80px;
+}
+
+.tag button{
+  margin: 30px 0px 0px 0px;
 }
 
 .tagline {
   padding-bottom: 5px;
 }
 
-.pointer {
+.lessgo {
   width: 120px;
-  padding-left: 25px;
+  margin-left: 20px;
 }
 
-.tag button img{
+.tag button img {
   transform: rotate(0deg);
 }
 
@@ -172,6 +176,10 @@ button {
   transform: translateY(4px);
 }
 
+.allProj .startedBtn img {
+  transform: rotate(90deg);
+}
+
 .arrow {
   height: 20px;
   width: 20px;
@@ -186,13 +194,16 @@ button {
 
 .pImgsec {
   display: flex;
-  width: 55%;
+  width: 45%;
   display: flex;
-  position: relative;
-  align-items: flex-end;
+  justify-content: flex-end;
+  /* position: relative; */
+  /* align-items: flex-start; */
+
 }
-.imgSec {
-  width: 100%;
+.pImgsec img {
+  width: 70%;
+  transform: rotateY(180deg);
 }
 
 .container {
@@ -284,7 +295,7 @@ p {
 
 .detail {
   width: 100%;
-  padding: 80px 40px 180px 40px;
+  padding: 140px 40px 160px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -421,7 +432,7 @@ p {
 }
 
 .title p {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .btnDiv {
@@ -453,10 +464,10 @@ p {
 
 .pointer {
   transform: rotateX(180deg);
-  scale: 2;
-  margin-left: 145px;
+  scale: 0.7;
+  margin-left: 105px;
   position: absolute;
-  margin-top: 15px;
+  margin-top: -45px;
 }
 
 .projectInfo {
@@ -778,8 +789,9 @@ p {
   padding: 55px;
   border-radius: 10px;
   background-color: #fbd6bc;
-  border: 2px solid #141435;
-  box-shadow: 3px 3px 3px #363937;
+  border: 2px solid #6f6969;
+  /* box-shadow: 3px 3px 3px #363937; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .Wbox h1 {
@@ -1469,6 +1481,7 @@ img {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .servicesSection {
@@ -1476,11 +1489,11 @@ img {
   flex-direction: column;
   gap: 25px;
   padding: 0px 40px;
-  width: 100%;
+  width: 98%;
 }
 
 .head {
-  box-shadow: 6px 6px #363937;
+  box-shadow: 4px 4px #363937;
   border-radius: 10px;
   padding: 20px 0px 20px 20px;
   width: 100%;
@@ -1666,7 +1679,7 @@ img {
   gap: 20px;
 }
 
-.userActions button img{
+.userActions button img {
   transform: rotate(0deg);
 }
 .thinking {
@@ -1678,7 +1691,7 @@ img {
   width: 70%;
 }
 
-.prices{
+.prices {
   width: 100%;
   flex-direction: column;
   padding: 40px 120px 40px 120px;
@@ -1687,7 +1700,7 @@ img {
   justify-content: center;
 }
 
-.introPrice{
+.introPrice {
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -1695,26 +1708,25 @@ img {
   gap: 5px;
 }
 
-.introPrice h1{
-  font-size: 2.5rem;  
-} 
+.introPrice h1 {
+  font-size: 2.5rem;
+}
 
-.introPrice p{
+.introPrice p {
   color: #6f6969;
   width: 70%;
 }
 
-.selected :hover{
+.selected :hover {
   border: 2px solid #141435;
   cursor: pointer;
-
 }
 
-.details .detail_parent :hover{
+.details .detail_parent :hover {
   border: none !important;
 }
 
-.faqs{
+.faqs {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1724,7 +1736,7 @@ img {
   gap: 5px;
 }
 
-.questsSet{
+.questsSet {
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -1732,7 +1744,7 @@ img {
   gap: 50px;
 }
 
-.quest{
+.quest {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1742,20 +1754,79 @@ img {
   transition: all 0.8 !important;
 }
 
-.show{
+.show {
   display: flex;
 }
 
-.hide{
+.hide {
   display: none;
 }
 
-#show{
+#show {
   transition: all 0.1 !important;
   transform: rotate(-90deg);
 }
 
-#hide{
+#hide {
   transition: all 0.1 !important;
   transform: rotate(90deg);
+}
+
+/* DEMO FORM STYLING */
+
+.parentForm {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.sForm {
+  width: 25%;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 0px;
+}
+
+.demoForm{
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  width: 70%;
+  justify-content: center;
+}
+
+.demoForm_input{
+  width: 100%;
+  border: 2px solid #6f6969;
+  padding: 10px;
+  border-radius: 7px;
+  font-family: "Sora", sans-serif;
+  font-weight: 1.2rem;
+}
+
+.demoForm div label h4{
+  font-weight: normal;
+}
+
+.demoForm button{
+ scale: 0.8;
+ width: 50%;
+}
+.denoForm_btn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.demoForm_input option{
+  font-family: "Sora", sans-serif;
+  color: #141435;
 }

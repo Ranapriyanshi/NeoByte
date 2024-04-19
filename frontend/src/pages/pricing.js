@@ -1,9 +1,18 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import btn from "../assets/btn.png";
+import {motion} from "framer-motion";
 
 const Project = () => {
+  const navigate = useNavigate();
+  const handleDemo = () => {
+    navigate("/demo");
+  };
+  const handleContact = () =>{
+    navigate("/contact")
+  }
   const [className, setclassName] = useState("");
   const [ques, setQues] = useState("");
   const changeId = (e) => {
@@ -15,7 +24,7 @@ const Project = () => {
   const prices = [
     {
       styleColor: "b1",
-      title: "Basic",
+      title: "Basic ",
       description: "Just started a small business, We want to grow with you.",
       availableOptions: [
         {
@@ -34,7 +43,7 @@ const Project = () => {
     },
     {
       styleColor: "b2",
-      title: "Merchant",
+      title: "Merchant ",
       description:
         "Get in touch for a personaised quote based on your requirement.",
       availableOptions: [
@@ -95,27 +104,27 @@ const Project = () => {
     },
   ];
   return (
-    <div>
+    <motion.div>
       <Navbar />
-      <div className="prices">
-        <div className="introPrice">
+      <motion.div className="prices">
+        <motion.div className="introPrice">
           <h1>Powerful personalisation, flexible pricing</h1>
           <p>
             We offer flexible plans that are suitable for businesses of all
             sizes. Please speak to the team about your requirements, and we'd be
             delighted to provide a custom quote.
           </p>
-          <div style={{ display: "flex", alignItems: "center", width: "15%" }}>
-            <button className="uniProj uniProj--stripe">Speak to Sales</button>
-          </div>
-        </div>
-        <div className="response" style={{ padding: "50px 0px" }}>
-          <div
+          <motion.div style={{ display: "flex", alignItems: "center", width: "15%" }}>
+            <button className="uniProj uniProj--stripe" onClick={handleDemo}>Speak to Sales</button>
+          </motion.div>
+        </motion.div>
+        <motion.div className="response" style={{ padding: "50px 0px" }}>
+          <motion.div
             className="details selection selected"
             style={{ width: "90%", gap: "50px" }}
           >
             {prices.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
                 className={
                   item.styleColor === className
@@ -132,7 +141,7 @@ const Project = () => {
                   height: "auto",
                   transition: "none",
                 }}
-                onClick={() => changeId(item.styleColor)}
+                onClick={handleContact}
               >
                 <h1>{item.title}</h1>
                 <p>{item.description}</p>
@@ -158,18 +167,18 @@ const Project = () => {
                 >
                   Click to contact sales
                 </p>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
-        <div className="faqs">
+          </motion.div>
+        </motion.div>
+        <motion.div className="faqs">
           <p style={{ fontSize: "1.2rem" }}>In case we missed something</p>
           <h1>Frequently Asked Questions</h1>
-          <div className="questsSet">
+          <motion.div className="questsSet">
             {question.map((item, index) => {
               return (
-                <div className="quest" key={index}>
-                  <div
+                <motion.div className="quest" key={index}>
+                  <motion.div
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <p>{item.question}</p>
@@ -182,21 +191,21 @@ const Project = () => {
                         showAnswer(item.question);
                       }}
                     />
-                  </div>
+                  </motion.div>
                   <p
                     className={item.question === ques ? "show" : "hide"}
                     style={{ color: "#6f6969" }}
                   >
                     {item.answwer}
                   </p>
-                </div>
+                </motion.div>
               );
             })}
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

@@ -19,98 +19,98 @@ const SignUp = () => {
     navigate("/login");
   };
   return (
-    <div className="base">
-      <div className="thin">
-        <div>
+    <motion.div className="base">
+      <motion.div className="thin">
+        <motion.div>
           <h1 className="logo" onClick={handlehome}>
             <img src={logo} alt="" />
             NeoByte
           </h1>
-        </div>
-        <div className="description">
+        </motion.div>
+        <motion.div className="description">
           <h1>Innovative Technology is Propelling Business Success</h1>
           <p>Join Us! Create a new account on NeoByte.</p>
-        </div>
-        <div className="form">
-          <div className="inputFeild">
-            <div id="active">
+        </motion.div>
+        <motion.div className="form">
+          <motion.div className="inputFeild">
+            <motion.div id="active">
               <label>Email Address</label>
               {/* <input type="email"  /> */}
               <p>priyanshirana78@gmail.com</p>
-            </div>
+            </motion.div>
             <hr />
-            <div id="notActive">
+            <motion.div id="notActive">
               <label>Password</label>
               <p>***************</p>
               {/* <input type="password" /> */}
-            </div>
-          </div>
-        </div>
-        <div className="actions">
-          <div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+        <motion.div className="actions">
+          <motion.div>
             <input type="checkbox" name="" id="" />
             <button className="loginBtn">Remember Me</button>
-          </div>
+          </motion.div>
           {/* <button className="forgotBtn" style={{textDecoration:"underline"}}>Forgot Password?</button> */}
-        </div>
-        <div className="done">
+        </motion.div>
+        <motion.div className="done">
           <button className="btn" >SignUp</button>
           <button className="btn" id="v2" onClick={handlelogin}>Login</button>
-        </div>
-        <div style={{width:"100%",display:"flex", alignItems:"center", justifyContent:"center", color:"#6f6969", marginBottom:"30px"}}>OR</div>
-        <div className="sso">
-          <div className="ssoParent" style={{backgroundColor:"#f3c2cc"}}>
-            <div className="ssoChild">
+        </motion.div>
+        <motion.div style={{width:"100%",display:"flex", alignItems:"center", justifyContent:"center", color:"#6f6969", marginBottom:"30px"}}>OR</motion.div>
+        <motion.div className="sso">
+          <motion.div className="ssoParent" style={{backgroundColor:"#f3c2cc"}}>
+            <motion.div className="ssoChild">
               <h4>Continue with Google</h4>
               <img src={google} alt="" />
-            </div>
-          </div>
-        </div>
-        <div className="sso" >
-          <div className="ssoParent" style={{backgroundColor:"#e0d8ff"}}>
-            <div className="ssoChild">
+            </motion.div>
+          </motion.div>
+        </motion.div>
+        <motion.div className="sso" >
+          <motion.div className="ssoParent" style={{backgroundColor:"#e0d8ff"}}>
+            <motion.div className="ssoChild">
               <h4>Continue with LinkedIn</h4>
               <img src={linkedin} alt="" />
-            </div>
-          </div>
-        </div>
-        <div className="sso" >
-          <div className="ssoParent" style={{backgroundColor:"#fee5c9"}}>
-            <div className="ssoChild">
+            </motion.div>
+          </motion.div>
+        </motion.div>
+        <motion.div className="sso" >
+          <motion.div className="ssoParent" style={{backgroundColor:"#fee5c9"}}>
+            <motion.div className="ssoChild">
               <h4>Continue with Github</h4>
               <img src={github} alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="fat">
-        <div className="backHome">
-          <div className="btnShadow"></div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+      <motion.div className="fat">
+        <motion.div className="backHome">
+          <motion.div className="btnShadow"></motion.div>
           <button className="startedBtn" onClick={handlehome}>
             Home
             <img src={home} alt="" />
           </button>
-        </div>
-        <div className="fatFather" id="id1">
-          <div id="I">
+        </motion.div>
+        <motion.div className="fatFather" id="id1">
+          <motion.div id="I">
             <img src={web} alt="" />
             <h3>Customised Web Designimg</h3>
-          </div>
-        </div>
-        <div className="fatFather" id="id2">
-          <div id="II">
+          </motion.div>
+        </motion.div>
+        <motion.div className="fatFather" id="id2">
+          <motion.div id="II">
             <img src={compiler} alt="" />
             <h3>Web Development Tool</h3>
-          </div>
-        </div>
-        <div className="fatFather" id="id3">
-          <div id="III">
+          </motion.div>
+        </motion.div>
+        <motion.div className="fatFather" id="id3">
+          <motion.div id="III">
             <img src={cart} alt="" />
             <h3>E-Commerce Assistence</h3>
-          </div>
-        </div>
-      </div>
-    </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

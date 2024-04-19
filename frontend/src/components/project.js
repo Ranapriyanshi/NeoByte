@@ -6,57 +6,58 @@ import pro2 from "../assets/pro2.jpg";
 import pro3 from "../assets/pro4.jpg";
 import goo from "../assets/gooo.png";
 import btn from "../assets/btn.png";
+import { motion } from "framer-motion";
 
 const Project = () => {
   return (
-    <div className="display">
-      <div className="top">
-        <div>
+    <motion.div className="display">
+      <motion.div className="top">
+        <motion.div>
           <h1>
             See our Projects
             <img src={pointer} alt="" srcSet="" className="pointer" />
           </h1>
-        </div>
+        </motion.div>
         <p>
           Checkout the cool work we have done. Every project is unique with
           different products, target audience and business goals.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="projectInfo">
-        <div className="info r design">
+      <motion.div className="projectInfo">
+        <motion.div className="info r design">
           <button className="tagBtn">Web design</button>
           <h2>Ornate</h2>
           <p>
             Ornate is a design sharing platforn build for the buding design to
             come forward and shae thier ecperiences with the world.
           </p>
-          <div>
+          <motion.div>
             <button className=" uniProj uniProj--stripe">
               See Full Project <img src={goo} alt="" />
             </button>
-          </div>
-        </div>
-        <div className="showCase">
-          <div className="parentContainer sr design">
-            <div className="card">
-              <div className="shadow"></div>
+          </motion.div>
+        </motion.div>
+        <motion.div className="showCase">
+          <motion.div className="parentContainer sr design">
+            <motion.div className="card">
+              <motion.div className="shadow"></motion.div>
               <img src={pro1} alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
-      <div className="projectInfo">
-        <div className="showCase">
-          <div className="parentContainer sl front">
-            <div className="shadow"></div>
-            <div className="card">
+      <motion.div className="projectInfo">
+        <motion.div className="showCase">
+          <motion.div className="parentContainer sl front">
+            <motion.div className="shadow"></motion.div>
+            <motion.div className="card">
               <img src={pro2} alt="" />
-            </div>
-          </div>
-        </div>
-        <div className="info l front">
+            </motion.div>
+          </motion.div>
+        </motion.div>
+        <motion.div className="info l front">
           <button className="tagBtn">Development</button>
           <h2>Oculus Quest</h2>
           <p>
@@ -66,11 +67,11 @@ const Project = () => {
           <button className="uniProj uniProj--stripe">
             See Full Project <img src={goo} alt="" />
           </button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div className="projectInfo">
-        <div className="info r back">
+      <motion.div className="projectInfo">
+        <motion.div className="info r back">
           <button className="tagBtn">E-Commerce</button>
           <h2>E-Commerce Project Title</h2>
           <p>
@@ -80,22 +81,22 @@ const Project = () => {
           <button className="uniProj uniProj--stripe">
             See Full Project <img src={goo} alt="" />
           </button>
-        </div>
-        <div className="showCase">
-          <div className="parentContainer sr back">
-            <div className="card">
-              <div className="shadow"></div>
+        </motion.div>
+        <motion.div className="showCase">
+          <motion.div className="parentContainer sr back">
+            <motion.div className="card">
+              <motion.div className="shadow"></motion.div>
               <img src={pro3} alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="allProj">
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+      <motion.div className="allProj">
         <button className="startedBtn" style={{ backgroundColor: "#fff" }}>
           See All Projects <img src={btn} alt="" className="arrow" />
         </button>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

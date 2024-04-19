@@ -1,4 +1,6 @@
 import React from "react";
+import "../index.css";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import sit from "../assets/22222.png";
@@ -10,9 +12,18 @@ import cart from "../assets/cart.png";
 import settings from "../assets/settings.png";
 import rating from "../assets/rating.png";
 import commerce from "../assets/comm.png";
-import "../index.css";
 
 const Services = () => {
+  const navigate = useNavigate();
+  const handleDemo = () => {
+    navigate("/demo");
+  };
+  const handleLogin = () =>{
+    navigate("/login")
+  }
+  const handleSignUp = () =>{
+    navigate("/signup")
+  }
   const child = [
     {
       name: "b1",
@@ -68,12 +79,12 @@ const Services = () => {
     },
   ];
   return (
-    <div>
+    <motion.div>
       <Navbar />
-      <div className="services">
-        <div className="servicesSection">
-          <div className="head">
-            <div className="tagLine">
+      <motion.div className="services">
+        <motion.div className="servicesSection">
+          <motion.div className="head">
+            <motion.div className="tagLine">
               <h1>
                 Let's collaborate to unlock the full potential of your brand
                 with our services.
@@ -84,33 +95,36 @@ const Services = () => {
                 growth through meticulously tailored paid media campaigns and
                 digital experiences.
               </p>
-              <div className="demo">
-                <button className="uniProj uniProj--stripe">
+              <motion.div className="demo">
+                <button
+                  className="uniProj uniProj--stripe"
+                  onClick={handleDemo}
+                >
                   Book demo <img src={btn} alt="" className="arrow" />
                 </button>
-              </div>
-            </div>
-            <div className="demoImg">
+              </motion.div>
+            </motion.div>
+            <motion.div className="demoImg">
               <img src={sit} alt="" />
-            </div>
-          </div>
-          <div className="childContain">
+            </motion.div>
+          </motion.div>
+          <motion.div className="childContain">
             {child.map((item, index) => {
               return (
-                <div className="child" id={item.name} key={index}>
+                <motion.div className="child" id={item.name} key={index}>
                   <img
                     src={item.imageName}
                     className="divisions pebble"
                     alt=""
                   />
                   <p>{item.content2}</p>
-                </div>
+                </motion.div>
               );
             })}
-          </div>
-          <div className="ellaboration">
-            <div className="detail serviceDetail">
-              <div
+          </motion.div>
+          <motion.div className="ellaboration">
+            <motion.div className="detail serviceDetail">
+              <motion.div
                 className="heading"
                 style={{
                   width: "80%",
@@ -123,69 +137,69 @@ const Services = () => {
                   We help the most exciting brands unlock their growth through
                   carefully crafted paid media campaign and digital experiences.{" "}
                 </p>
-              </div>
-            </div>
-            <div className="horizontal">
-              <div className="leftContent">
+              </motion.div>
+            </motion.div>
+            <motion.div className="horizontal">
+              <motion.div className="leftContent">
                 {achievementsLeft.map((item, index) => {
                   return (
-                    <div className="achievement" key={index}>
+                    <motion.div className="achievement" key={index}>
                       <h3>{item.name}</h3>
                       <p>{item.content}</p>
-                    </div>
+                    </motion.div>
                   );
                 })}
-              </div>
-              <div className="bubbles">
-                <div className="us alternateUs" id="ba1">
+              </motion.div>
+              <motion.div className="bubbles">
+                <motion.div className="us alternateUs" id="ba1">
                   <img src={settings} alt="" />
-                </div>
-                <div className="us alternateUs" id="ba2">
+                </motion.div>
+                <motion.div className="us alternateUs" id="ba2">
                   <img src={rating} alt="" />
-                </div>
-                <div className="us alternateUs" id="ba3">
+                </motion.div>
+                <motion.div className="us alternateUs" id="ba3">
                   <img src={commerce} alt="" />
-                </div>
-              </div>
-              <div className="rightContent">
+                </motion.div>
+              </motion.div>
+              <motion.div className="rightContent">
                 {achievementsRight.map((item, index) => {
                   return (
-                    <div className="achievement" key={index}>
+                    <motion.div className="achievement" key={index}>
                       <h3>{item.name}</h3>
                       <p>{item.content}</p>
-                    </div>
+                    </motion.div>
                   );
                 })}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="ready">
-          <div className="headTitle">
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+        <motion.div className="ready">
+          <motion.div className="headTitle">
             <h1>Ready to get started?</h1>
             <p>
-              Sign up to explore the slippy app and receive a free custom sample
+              Sign up to explore the NeoByte and receive a free custom sample
               pack. We recommend booking a demo to see the platform in action,
               and to learn how some of the worlds most innovative brands are
-              using slippy to retain more customers.
+              using NeoByte to retain more customers.
             </p>
-            <div className="userActions">
-              <button className="uniProj uniProj--stripe">
+            <motion.div className="userActions">
+              <button className="uniProj uniProj--stripe" onClick={handleLogin}>
                 Get Started <img src={btn} alt="" className="arrow" />
               </button>
-              <button className="uniProj uniProj--stripe">
+              <button className="uniProj uniProj--stripe" onClick={handleSignUp}>
                 Sign up
                 <img src={btn} alt="" className="arrow" />{" "}
               </button>
-            </div>
-          </div>
-          <div className="thinking">
+            </motion.div>
+          </motion.div>
+          <motion.div className="thinking">
             <img src={think} alt="" />
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

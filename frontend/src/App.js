@@ -8,6 +8,7 @@ import Contact from "./pages/contact";
 import Services from "./pages/services";
 import Pricing from "./pages/pricing";
 import Dashboard from "./pages/dashboard";
+import Demo from "./pages/book-demo";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/services" element={<Services />} />
           <Route exact path="/pricing" element={<Pricing />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
+          <Route exact path="/demo" element={<Demo />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -2,9 +2,10 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../index.css";
-// import home from "../assets/home.png";
 // import dashboard from "../assets/dashboard.png";
-// import profile from "../assets/profile.png";
+// import home from "../assets/home.png";
+import profile from "../assets/profile.png";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -20,6 +21,9 @@ const Navbar = () => {
   const handlelogin = () => {
     navigate("/login");
   };
+  const handleSignup = () => {
+    navigate("/signup");
+  };
   // const handleDashboard = () => {
   //   navigate("/dashboard");
   // };
@@ -31,12 +35,17 @@ const Navbar = () => {
     { name: "Contact", path: "/contact" },
   ];
   return (
-    <div className="nav">
+    <motion.div
+      className="nav"
+      initial={{ y: -300 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 1, type: "spring" }}
+    >
       <h1 className="logo" onClick={handlehome}>
         <img src={logo} alt="" />
         NeoByte
       </h1>
-      <div className="links">
+      <motion.div className="links">
         <ul className="list">
           {paths.map((item, index) => {
             return (
@@ -50,21 +59,25 @@ const Navbar = () => {
             );
           })}
         </ul>
-      </div>
-      <div className="userPresnt">
+      </motion.div>
+      <motion.div className="userPresnt">
         <button className="btn" id="btn2" onClick={handlelogin}>
           Login
         </button>
-        <button className="btn" onClick={handlelogin}>
+        <button className="btn" onClick={handleSignup}>
           Get Started
         </button>
         {/* <img src={profile} alt="" /> */}
-        {/* <button className="startedBtn" id="profileBtn" onClick={handleDashboard}>
+        {/* <button
+          className="startedBtn"
+          id="profileBtn"
+          onClick={handleDashboard}
+        >
           <img src={dashboard} alt="" />
           Dashboard
         </button> */}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
