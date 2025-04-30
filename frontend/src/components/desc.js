@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import monday from "../assets/monday.png";
 import shopify from "../assets/shopify.png";
 import treelo from "../assets/treelo.webp";
@@ -12,12 +12,38 @@ import btn from "../assets/btn.png";
 import "../index.css";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Typewriter } from "react-simple-typewriter";
 
 const Desc = () => {
   const navigate = useNavigate();
   const handleContact = () => {
     navigate("/contact");
   };
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  const [cardInView, setCardInView] = useState(false);
+
+  const { ref: cardRef } = useInView({
+    threshold: 0.2,
+    triggerOnce: false,
+    onChange: (inView, entry) => {
+      const y = entry.boundingClientRect.y;
+
+      if (inView) {
+        setCardInView(true); // Trigger animation on scroll into view
+      } else if (y > 0) {
+        // If scrolling up and leaving the section (y > 0), reset animation
+        setCardInView(false);
+      }
+      // Else, do nothing (scrolling down past section – keep animation visible)
+    },
+  });
+
   return (
     <motion.div className="section">
       <motion.div className="band">
@@ -28,17 +54,37 @@ const Desc = () => {
         <img className="logos" src={paypal} alt="" />
       </motion.div>
       <motion.div className="detail">
-        <motion.div className="heading">
+        <motion.div className="heading" ref={ref}>
           <h1>
-            Save your time <br /> managing business with us
+            {inView && (
+              <Typewriter
+                words={["Save your time, managing business with us."]}
+                loop={Infinity}
+                cursor
+                cursorStyle="|"
+                typeSpeed={50}
+                deleteSpeed={0}
+                delaySpeed={2000}
+              />
+            )}
           </h1>
           <p>
-            We help the most exciting brands unlock their growth through
-            carefully crafted paid media campaign and digital experiences.{" "}
+            We help ambitious brands unlock growth through, custom software
+            solutions, and scalable technology systems.{" "}
           </p>
         </motion.div>
-        <motion.div className="bBox">
-          <motion.div className="box" id="b1">
+        <motion.div className="bBox" ref={cardRef}>
+          <motion.div
+            className="box"
+            id="b1"
+            initial={{ y: 120, rotate: -10, opacity: 0 }}
+            animate={
+              cardInView
+                ? { y: 0, rotate: 0, opacity: 1 }
+                : { y: 120, rotate: -10, opacity: 0 }
+            }
+            transition={{ delay: 0.2, duration: 1.2, type: "spring" }}
+          >
             <img src={web} alt="" className="divisions" />
             <h2>Web Design</h2>
             <p>
@@ -46,15 +92,37 @@ const Desc = () => {
               your business or personal site.
             </p>
           </motion.div>
-          <motion.div className="box" id="b2">
+
+          <motion.div
+            className="box"
+            id="b2"
+            initial={{ y: 120, rotate: 0, opacity: 0 }}
+            animate={
+              cardInView
+                ? { y: 0, rotate: 0, opacity: 1 }
+                : { y: 120, rotate: 0, opacity: 0 }
+            }
+            transition={{ delay: 0.4, duration: 1.2, type: "spring" }}
+          >
             <img src={compiler} alt="" className="divisions" />
             <h2>Development</h2>
             <p>
-              We will develop an online tool to create unique widget with a
-              speicific functionality for your business website.
+              We develop online tools to create unique widget for your business
+              website.
             </p>
           </motion.div>
-          <motion.div className="box" id="b3">
+
+          <motion.div
+            className="box"
+            id="b3"
+            initial={{ y: 120, rotate: 10, opacity: 0 }}
+            animate={
+              cardInView
+                ? { y: 0, rotate: 0, opacity: 1 }
+                : { y: 120, rotate: 10, opacity: 0 }
+            }
+            transition={{ delay: 0.6, duration: 1.2, type: "spring" }}
+          >
             <img src={cart} alt="" className="divisions" />
             <h2>E-Commerce</h2>
             <p>

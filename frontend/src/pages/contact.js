@@ -5,6 +5,7 @@ import mail from "../assets/mail.png";
 import calll from "../assets/calll.png";
 import location from "../assets/location.png";
 import girl from "../assets/222.png";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (

@@ -12,6 +12,8 @@ import cart from "../assets/cart.png";
 import settings from "../assets/settings.png";
 import rating from "../assets/rating.png";
 import commerce from "../assets/comm.png";
+import { motion } from "framer-motion";
+
 
 const Services = () => {
   const navigate = useNavigate();

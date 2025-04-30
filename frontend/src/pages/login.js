@@ -9,6 +9,8 @@ import linkedin from "../assets/linkedIn.png";
 import github from "../assets/github.png";
 import "../index.css";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
 
 const Login = () => {
   const navigate = useNavigate();

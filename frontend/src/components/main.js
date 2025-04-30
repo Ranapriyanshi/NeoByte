@@ -19,17 +19,19 @@ const Main = () => {
       <motion.div className="main">
         <motion.div className="tag">
           <h1 className="tagline">
-            Let's cultivate your success together
+            Accelerate growth with web solutions built to scale,from first click
+            to final conversion
             <img className="lessgo" src={pointer} alt="" />
           </h1>
           <p className="p">
-            Empower businesses to thrive through comprehensive tech solutions
-            and unparalleled support tailored to your needs
+            Neobyte empowers businesses to thrive through cutting-edge digital
+            solutions, custom web development, and unmatched support tailored to
+            your goals.
           </p>
           <motion.button
             className="uniProj uniProj--stripe"
             onClick={handleDemo}
-            initial={{ scale:0.9 }}
+            initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, type: "spring" }}
           >

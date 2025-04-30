@@ -25,11 +25,11 @@ const Project = () => {
     {
       styleColor: "b1",
       title: "Basic ",
-      description: "Just started a small business, We want to grow with you.",
+      description: "Perfect for early-stage businesses ready to go digital.",
       availableOptions: [
         {
           id: 1,
-          feature: "Website template creation",
+          feature: "Website template setup",
         },
         {
           id: 2,
@@ -45,7 +45,7 @@ const Project = () => {
       styleColor: "b2",
       title: "Merchant ",
       description:
-        "Get in touch for a personaised quote based on your requirement.",
+        "Ideal for growing brands that need a fully integrated solution.",
       availableOptions: [
         {
           id: 1,
@@ -64,15 +64,16 @@ const Project = () => {
     {
       styleColor: "b3",
       title: "Premium",
-      description: "Just started a small business, We want to grow with you.",
+      description:
+        "For businesses ready to scale aggressively with full feature access.",
       availableOptions: [
         {
           id: 1,
-          feature: "Website template creation",
+          feature: "Website template+ Custom Features",
         },
         {
           id: 2,
-          feature: "access given",
+          feature: "Full Dashboard Access",
         },
         {
           id: 3,

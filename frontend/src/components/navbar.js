@@ -35,40 +35,43 @@ const Navbar = () => {
     { name: "Contact", path: "/contact" },
   ];
   return (
-    <motion.div
-      className="nav"
-      initial={{ y: -300 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 1, type: "spring" }}
-    >
-      <h1 className="logo" onClick={handlehome}>
-        <img src={logo} alt="" />
-        NeoByte
-      </h1>
-      <motion.div className="links">
-        <ul className="list">
-          {paths.map((item, index) => {
-            return (
-              <li
-                key={index}
-                className={path === item.path ? "navLinks active" : "navLinks"}
-                onClick={() => handleNavigation(item.path)}
-              >
-                {item.name}
-              </li>
-            );
-          })}
-        </ul>
-      </motion.div>
-      <motion.div className="userPresnt">
-        <button className="btn" id="btn2" onClick={handlelogin}>
-          Login
-        </button>
-        <button className="btn" onClick={handleSignup}>
-          Get Started
-        </button>
-        {/* <img src={profile} alt="" /> */}
-        {/* <button
+    <motion.div className="nav-container">
+      <motion.div
+        className="nav"
+        initial={{ y: -300 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 1, type: "spring" }}
+      >
+        <h1 className="logo" onClick={handlehome}>
+          <img src={logo} alt="" />
+          NeoByte
+        </h1>
+        <motion.div className="links">
+          <ul className="list">
+            {paths.map((item, index) => {
+              return (
+                <li
+                  key={index}
+                  className={
+                    path === item.path ? "navLinks active" : "navLinks"
+                  }
+                  onClick={() => handleNavigation(item.path)}
+                >
+                  {item.name}
+                </li>
+              );
+            })}
+          </ul>
+        </motion.div>
+        <motion.div className="userPresnt">
+          {/* <button className="btn" id="btn2" onClick={handlelogin}>
+            Login
+          </button> */}
+          <button className="btn" onClick={handlelogin}>
+            Get Started
+          </button>
+          {/* <img src={profile} alt="" /> */}
+          {/* <button
           className="startedBtn"
           id="profileBtn"
           onClick={handleDashboard}
@@ -76,6 +79,7 @@ const Navbar = () => {
           <img src={dashboard} alt="" />
           Dashboard
         </button> */}
+        </motion.div>
       </motion.div>
     </motion.div>
   );
