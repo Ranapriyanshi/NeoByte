@@ -3,16 +3,18 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import btn from "../assets/btn.png";
-import {motion} from "framer-motion";
+
+import think from "../assets/222222.png";
+import { motion } from "framer-motion";
 
 const Project = () => {
   const navigate = useNavigate();
   const handleDemo = () => {
     navigate("/demo");
   };
-  const handleContact = () =>{
-    navigate("/contact")
-  }
+  const handleContact = () => {
+    navigate("/contact");
+  };
   const [className, setclassName] = useState("");
   const [ques, setQues] = useState("");
   const changeId = (e) => {
@@ -115,11 +117,15 @@ const Project = () => {
             sizes. Please speak to the team about your requirements, and we'd be
             delighted to provide a custom quote.
           </p>
-          <motion.div style={{ display: "flex", alignItems: "center", width: "15%" }}>
-            <button className="uniProj uniProj--stripe" onClick={handleDemo}>Speak to Sales</button>
+          <motion.div
+            style={{ display: "flex", alignItems: "center", width: "15%" }}
+          >
+            <button className="uniProj uniProj--stripe" onClick={handleDemo}>
+              Speak to Sales
+            </button>
           </motion.div>
         </motion.div>
-        <motion.div className="response" style={{ padding: "50px 0px" }}>
+        <motion.div className="response" style={{ padding: "50px 120px" }}>
           <motion.div
             className="details selection selected"
             style={{ width: "90%", gap: "50px" }}
@@ -172,36 +178,46 @@ const Project = () => {
             ))}
           </motion.div>
         </motion.div>
-        <motion.div className="faqs">
-          <p style={{ fontSize: "1.2rem" }}>In case we missed something</p>
-          <h1>Frequently Asked Questions</h1>
-          <motion.div className="questsSet">
-            {question.map((item, index) => {
-              return (
-                <motion.div className="quest" key={index}>
-                  <motion.div
-                    style={{ display: "flex", justifyContent: "space-between" }}
-                  >
-                    <p>{item.question}</p>
-                    <img
-                      src={btn}
-                      alt=""
-                      id={item.question === ques ? "show" : "hide"}
-                      className="arrow"
-                      onClick={() => {
-                        showAnswer(item.question);
+        <motion.div className="questionSection">
+          <motion.div className="faqs">
+            <motion.div className="faqsTitle">
+              <p style={{ fontSize: "1.2rem" }}>In case we missed something</p>
+              <h1>Frequently Asked Questions</h1>
+            </motion.div>
+            <motion.div className="questsSet">
+              {question.map((item, index) => {
+                return (
+                  <motion.div className="quest" key={index}>
+                    <motion.div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
                       }}
-                    />
+                    >
+                      <p>{item.question}</p>
+                      <img
+                        src={btn}
+                        alt=""
+                        id={item.question === ques ? "show" : "hide"}
+                        className="arrow"
+                        onClick={() => {
+                          showAnswer(item.question);
+                        }}
+                      />
+                    </motion.div>
+                    <p
+                      className={item.question === ques ? "show" : "hide"}
+                      style={{ color: "#6f6969" }}
+                    >
+                      {item.answwer}
+                    </p>
                   </motion.div>
-                  <p
-                    className={item.question === ques ? "show" : "hide"}
-                    style={{ color: "#6f6969" }}
-                  >
-                    {item.answwer}
-                  </p>
-                </motion.div>
-              );
-            })}
+                );
+              })}
+            </motion.div>
+          </motion.div>
+          <motion.div className="thinking">
+            <img src={think} alt="" />
           </motion.div>
         </motion.div>
       </motion.div>

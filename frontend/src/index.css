@@ -18,7 +18,7 @@ button {
 }
 
 /* Navbar Styling */
-.nav-container{
+.nav-container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -33,7 +33,7 @@ button {
   z-index: 1000;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 8px 20px;
   width: 80%;
   background-color: white;
   border-radius: 3rem;
@@ -46,7 +46,7 @@ button {
 .logo {
   font-family: "Corben", serif;
   font-weight: 700;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   color: #141435;
   text-decoration: none;
   display: flex;
@@ -57,7 +57,7 @@ button {
 }
 
 .logo img {
-  width: 40px;
+  width: 35px;
 }
 
 .links {
@@ -116,7 +116,7 @@ button {
   align-items: center;
   justify-content: center;
   font-family: "Sora", sans-serif;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   border-radius: 2rem;
   opacity: 1;
 }
@@ -143,7 +143,7 @@ button {
   width: 100%;
   display: flex;
   padding-bottom: 50px;
-  padding-left: 120px;
+  padding-left: 200px;
 }
 
 .tag {
@@ -154,7 +154,7 @@ button {
   margin-top: 80px;
 }
 
-.tag button{
+.tag button {
   margin: 30px 0px 0px 0px;
 }
 
@@ -216,7 +216,6 @@ button {
   justify-content: flex-end;
   /* position: relative; */
   /* align-items: flex-start; */
-
 }
 .pImgsec img {
   width: 70%;
@@ -330,7 +329,7 @@ p {
   flex-direction: column;
 }
 
-.heading p{
+.heading p {
   width: 80%;
   /* padding: 0 10px; */
 }
@@ -474,7 +473,7 @@ p {
   flex-direction: column;
 }
 .top {
-  width: 35%;
+  width: 32%;
   display: flex;
   flex-direction: column;
 }
@@ -501,22 +500,25 @@ p {
 .projectInfo {
   width: 100%;
   display: flex;
-  margin-bottom: 15vh;
+  flex-direction: column;
+  margin-bottom: 5vh;
+  align-items: center;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 .info {
-  width: 50%;
+  width: 70%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.l {
-  margin-left: 150px;
-}
-
-.r {
-  margin-right: 150px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
 }
 
 .tagBtn {
@@ -551,46 +553,72 @@ p {
 }
 
 .showCase {
-  width: 50%;
-  display: flex;
-  align-items: center;
-}
-
-.parentContainer {
-  display: flex;
+  width: 75%;
+  height: 78vh;
   position: relative;
-  width: 100%;
-  height: 100%;
+  margin-left: 35px;
 }
-.sr {
-  display: flex;
-  justify-content: left;
-}
-.sl {
+/* .sl {
   display: flex;
   justify-content: flex-start;
+} */
+
+.shadow {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  /* background-color: #9bd3d0; */
+  border: 4px solid #373737;
 }
 
 .card {
-  transition: all 0.3s;
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
   border-radius: 10px;
-  margin-bottom: 20px;
+  border: 4px solid #373737;
 }
 
-.shadow {
-  display: flex;
-  width: 80%;
+.card img{
   height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .overlay {
   position: absolute;
-  border-radius: 10px;
-  left: 25px;
-  top: 15px;
-  border: 2px solid #373737;
-  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.projectTag {
+  position: absolute;
+  top: 1.5vh; /* Adjust vertical position as needed */
+  left: -6vh;
+  z-index: 2;
 }
 .design .shadow {
   background-color: #9bd3d0;
@@ -606,7 +634,6 @@ p {
 .card img {
   width: 100%;
   border-radius: 10px;
-  border: 2px solid #373737;
   position: relative;
 }
 
@@ -774,17 +801,16 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-bottom: 120px;
-  background-color: #9bd3d0;
+  padding:0px 0px 120px 220px;
 }
 .sec {
-  padding-left: 120px;
+  /* padding-left: 120px; */
   width: 100%;
   display: flex;
 }
 
 .line img {
-  width: 74%;
+  width: 75%;
   display: flex;
   margin-top: 25px;
 }
@@ -792,22 +818,23 @@ p {
 .wide {
   width: 60%;
   display: flex;
+  align-items: center;
   flex-direction: column;
   padding-bottom: 60px;
-  padding-top: 80px;
+  padding-top: 160px;
 }
 
 .wide h1 {
-  font-size: 3.1rem;
+  font-size: 50px;
 }
 
 .WbBox {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 60px;
+  gap: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 50px;
 }
 
 .Wbox {
@@ -837,39 +864,6 @@ p {
   width: 5vh;
 }
 
-.buttons {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 5vh;
-  align-items: center;
-  padding-top: 25px;
-}
-
-.buttons button {
-  width: 5%;
-  padding: 5px 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  box-shadow: 4px 4px 1px #363937;
-  transition: all 0.1s;
-  cursor: pointer;
-}
-
-.buttons button:active {
-  box-shadow: none;
-  transform: translateY(4px);
-}
-
-#one {
-  transform: rotate(90deg);
-}
-#two {
-  transform: rotate(-90deg);
-}
-
 .far {
   width: 40%;
   display: flex;
@@ -878,20 +872,21 @@ p {
 }
 
 .far img {
-  width: 100%;
+  width: 90%;
 }
 
 .line {
   display: flex;
   bottom: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   position: relative;
 }
 
 .line img {
   position: absolute;
+  width: 90%;
   top: -70px;
-  left: -9px;
+  left: -296px;
   transform: rotate(180deg);
 }
 
@@ -1403,7 +1398,6 @@ textarea {
   justify-content: center;
   padding: 10px 0px 80px 0;
   gap: 30px;
-  
 }
 
 .detail_parent {
@@ -1567,7 +1561,6 @@ img {
 
 .demo img {
   transform: rotate(0deg);
-  
 }
 
 .childContain {
@@ -1606,20 +1599,25 @@ img {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 60px 0px 60px 0px;
+  height: 100vh;
+}
+.serviceDetail{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 35px;
 }
 
-.serviceDetail {
-  padding: 0px 0px 50px 0px !important;
-}
-
-.serviceDetail h1 {
-  padding-bottom: 0px !important;
+.serviceDetail h1{
+  font-size: 50px;
 }
 
 .serviceDetail p {
-  max-width: 60%;
-  padding-bottom: 0px !important;
+  width: 60%;
   color: #6f6969;
 }
 
@@ -1630,7 +1628,6 @@ img {
   gap: 40px;
   margin: 40px 0px;
 }
-/* .horizontal div{ width: 33%;} */
 
 .leftContent {
   width: 35%;
@@ -1641,12 +1638,12 @@ img {
   text-align: end;
 }
 
-.leftContent h3 {
-  text-align: end;
+.achievement h3 {
   width: 100%;
   padding: 0px 0px 10px 0px;
   margin-top: 3vh;
 }
+
 .rightContent {
   display: flex;
   width: 35%;
@@ -1655,14 +1652,6 @@ img {
   gap: 12vh;
   text-align: start;
 }
-
-.rightContent h3 {
-  text-align: start;
-  width: 100%;
-  padding: 0px 0px 10px 0px;
-  margin-top: 3vh;
-}
-
 .bubbles {
   display: flex;
   flex-direction: column;
@@ -1713,24 +1702,22 @@ img {
   transform: rotate(0deg);
 }
 .thinking {
-  width: 40%;
-  display: flex;
-  justify-content: flex-end;
+  width: 30%;
 }
 .thinking img {
-  width: 70%;
+  width: 100%;
 }
 
 .prices {
   width: 100%;
   flex-direction: column;
-  padding: 40px 120px 40px 120px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .introPrice {
+  padding: 40px 120px 40px 120px;
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -1756,14 +1743,25 @@ img {
   border: none !important;
 }
 
-.faqs {
+.questionSection{
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 40px 120px 40px 120px;
+}
+
+.faqs {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* justify-content: flex-start; */
   gap: 5px;
+}
+
+.faqsTitle{
+  width: 40%;
+  justify-content: center;
+  align-items:flex-end ;
 }
 
 .questsSet {
@@ -1803,6 +1801,7 @@ img {
 }
 
 /* DEMO FORM STYLING */
+/* padding: 40px 120px 40px 120px; */
 
 .parentForm {
   width: 100%;
@@ -1824,7 +1823,7 @@ img {
   padding: 30px 0px;
 }
 
-.demoForm{
+.demoForm {
   display: flex;
   gap: 15px;
   flex-direction: column;
@@ -1832,7 +1831,7 @@ img {
   justify-content: center;
 }
 
-.demoForm_input{
+.demoForm_input {
   width: 100%;
   border: 2px solid #6f6969;
   padding: 10px;
@@ -1841,22 +1840,22 @@ img {
   font-weight: 1.2rem;
 }
 
-.demoForm div label h4{
+.demoForm div label h4 {
   font-weight: normal;
 }
 
-.demoForm button{
- scale: 0.8;
- width: 50%;
+.demoForm button {
+  scale: 0.8;
+  width: 50%;
 }
-.denoForm_btn{
+.denoForm_btn {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.demoForm_input option{
+.demoForm_input option {
   font-family: "Sora", sans-serif;
   color: #141435;
 }
