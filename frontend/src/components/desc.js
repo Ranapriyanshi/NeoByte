@@ -35,14 +35,42 @@ const Desc = () => {
       const y = entry.boundingClientRect.y;
 
       if (inView) {
-        setCardInView(true); // Trigger animation on scroll into view
+        setCardInView(true);
       } else if (y > 0) {
-        // If scrolling up and leaving the section (y > 0), reset animation
         setCardInView(false);
       }
-      // Else, do nothing (scrolling down past section – keep animation visible)
     },
   });
+
+  const services = [
+    {
+      id: "b1",
+      image: web,
+      title: "Web Design",
+      description:
+        "We provide you with customised website design that's perfect for your business or personal site.",
+      delay: 0.2,
+      rotate: -10,
+    },
+    {
+      id: "b2",
+      image: compiler,
+      title: "Development",
+      description:
+        "We develop online tools to create unique widget for your business website.",
+      delay: 0.4,
+      rotate: 0,
+    },
+    {
+      id: "b3",
+      image: cart,
+      title: "E-Commerce",
+      description:
+        "We provide assistance to customers with everything from making online purchase decisions to investing.",
+      delay: 0.6,
+      rotate: 10,
+    },
+  ];
 
   return (
     <motion.div className="section">
@@ -74,62 +102,28 @@ const Desc = () => {
           </p>
         </motion.div>
         <motion.div className="bBox" ref={cardRef}>
-          <motion.div
-            className="box"
-            id="b1"
-            initial={{ y: 120, rotate: -10, opacity: 0 }}
-            animate={
-              cardInView
-                ? { y: 0, rotate: 0, opacity: 1 }
-                : { y: 120, rotate: -10, opacity: 0 }
-            }
-            transition={{ delay: 0.2, duration: 1.2, type: "spring" }}
-          >
-            <img src={web} alt="" className="divisions" />
-            <h2>Web Design</h2>
-            <p>
-              We provide you with customised website design that's perfect for
-              your business or personal site.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="box"
-            id="b2"
-            initial={{ y: 120, rotate: 0, opacity: 0 }}
-            animate={
-              cardInView
-                ? { y: 0, rotate: 0, opacity: 1 }
-                : { y: 120, rotate: 0, opacity: 0 }
-            }
-            transition={{ delay: 0.4, duration: 1.2, type: "spring" }}
-          >
-            <img src={compiler} alt="" className="divisions" />
-            <h2>Development</h2>
-            <p>
-              We develop online tools to create unique widget for your business
-              website.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="box"
-            id="b3"
-            initial={{ y: 120, rotate: 10, opacity: 0 }}
-            animate={
-              cardInView
-                ? { y: 0, rotate: 0, opacity: 1 }
-                : { y: 120, rotate: 10, opacity: 0 }
-            }
-            transition={{ delay: 0.6, duration: 1.2, type: "spring" }}
-          >
-            <img src={cart} alt="" className="divisions" />
-            <h2>E-Commerce</h2>
-            <p>
-              We provide assistance to customers with everything from making
-              online purchase decisions to investing.
-            </p>
-          </motion.div>
+          {services.map((service, index) => (
+            <motion.div
+              key={service.id}
+              className="box"
+              id={service.id}
+              initial={{ y: 120, rotate: service.rotate, opacity: 0 }}
+              animate={
+                cardInView
+                  ? { y: 0, rotate: 0, opacity: 1 }
+                  : { y: 120, rotate: service.rotate, opacity: 0 }
+              }
+              transition={{
+                delay: service.delay,
+                duration: 1.2,
+                type: "spring",
+              }}
+            >
+              <img src={service.image} alt="" className="divisions" />
+              <h2>{service.title}</h2>
+              <p>{service.description}</p>
+            </motion.div>
+          ))}
         </motion.div>
       </motion.div>
 

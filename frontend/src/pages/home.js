@@ -4,6 +4,7 @@ import Main from "../components/main";
 import Project from "../components/project";
 import Feedback from "../components/feeback";
 import Footer from "../components/footer";
+import ValuePreposition from "../components/valuePreposition";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Navbar />
       <Main />
       <Project />
+      <ValuePreposition/>
       <Feedback />
       <Footer />
     </div>

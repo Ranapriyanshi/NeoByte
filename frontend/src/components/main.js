@@ -5,8 +5,6 @@ import Desc from "./desc";
 import fly from "../assets/2222.png";
 import btn from "../assets/btn.png";
 import pointer from "../assets/arrow.png";
-// import p1 from "../assets/profile1.png";
-// import p2 from "../assets/profile2.png";
 // import tag from "../assets/tag.png";
 
 const Main = () => {
@@ -39,22 +37,6 @@ const Main = () => {
           </motion.button>
         </motion.div>
         <motion.div className="pImgsec">
-          {/* <motion.div className="container c1">
-          <motion.div className="pContain">
-            <motion.div className="contain">
-              <img src={p1} alt="" className="profile1" />
-            </motion.div>>
-          </motion.div>
-        </motion.div>
-
-        <motion.div className="container c2">
-          <motion.div className="pContain" style={{ border: "16px solid #98d3ce" }}>
-            <motion.div className="contain" style={{ backgroundColor: "#ef9396" }}>
-              <img src={p2} alt="" className="profile2" />
-            </motion.div>>
-          </motion.div>
-        </motion.div> */}
-          {/* <img src={tag} className="badge" alt="" /> */}
           <img src={fly} alt="" />
         </motion.div>
       </motion.div>
