@@ -15,11 +15,11 @@ const Project = () => {
   const handleContact = () => {
     navigate("/contact");
   };
-  const [className, setclassName] = useState("");
+  //   const [className, setclassName] = useState(""); // eslint-disable-line no-unused-vars
   const [ques, setQues] = useState("");
-  const changeId = (e) => {
-    setclassName(e);
-  };
+  //   const changeId = (e) => { // eslint-disable-line no-unused-vars
+  //     setclassName(e);
+  //   };
   const showAnswer = (e) => {
     ques ? setQues("") : setQues(e);
   };

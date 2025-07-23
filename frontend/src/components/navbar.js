@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 import "../index.css";
 // import dashboard from "../assets/dashboard.png";
 // import home from "../assets/home.png";
-import profile from "../assets/profile.png";
+// import profile from "../assets/profile.png"; // eslint-disable-line no-unused-vars
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -21,9 +21,9 @@ const Navbar = () => {
   const handlelogin = () => {
     navigate("/login");
   };
-  const handleSignup = () => {
-    navigate("/signup");
-  };
+  // const handleSignup = () => { // eslint-disable-line no-unused-vars
+  //   navigate("/signup");
+  // };
   // const handleDashboard = () => {
   //   navigate("/dashboard");
   // };

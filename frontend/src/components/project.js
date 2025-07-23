@@ -5,7 +5,7 @@ import pro1 from "../assets/pro1.png";
 import pro2 from "../assets/pro2.jpg";
 import pro3 from "../assets/pro4.jpg";
 import goo from "../assets/gooo.png";
-import btn from "../assets/btn.png";
+// import btn from "../assets/btn.png"; // eslint-disable-line no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
 
 const Project = () => {
@@ -34,15 +34,15 @@ const Project = () => {
   ];
 
   const [currentProject, setCurrentProject] = useState(0);
-  const [direction, setDirection] = useState(0);
+  // const direction = ... // eslint-disable-line no-unused-vars
 
   const handleNext = () => {
-    setDirection(1);
+    // setDirection(1);
     setCurrentProject((prev) => (prev + 1) % projects.length);
   };
 
   const handlePrev = () => {
-    setDirection(-1);
+    // setDirection(-1);
     setCurrentProject((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
   };
 

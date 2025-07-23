@@ -9,9 +9,9 @@ import btn from "../assets/btn.png";
 import web from "../assets/web.png";
 import compiler from "../assets/compiler.png";
 import cart from "../assets/cart.png";
-import settings from "../assets/settings.png";
-import rating from "../assets/rating.png";
-import commerce from "../assets/comm.png";
+// import settings from "../assets/settings.png"; // eslint-disable-line no-unused-vars
+// import rating from "../assets/rating.png"; // eslint-disable-line no-unused-vars
+// import commerce from "../assets/commerce.png"; // eslint-disable-line no-unused-vars
 import { motion } from "framer-motion";
 
 

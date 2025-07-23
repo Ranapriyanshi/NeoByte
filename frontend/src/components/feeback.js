@@ -32,7 +32,7 @@ const Feedback = () => {
   ];
 
   const [currentFeedback, setCurrentFeedback] = useState(0);
-  const [direction, setDirection] = useState(0);
+  // const direction = ... // eslint-disable-line no-unused-vars
 
   const handleNext = () => {
     setDirection(1);
