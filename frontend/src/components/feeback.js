@@ -35,12 +35,12 @@ const Feedback = () => {
   // const direction = ... // eslint-disable-line no-unused-vars
 
   const handleNext = () => {
-    setDirection(1);
+    // setDirection(1);
     setCurrentFeedback((prev) => (prev + 1) % feedbacks.length);
   };
 
   const handlePrev = () => {
-    setDirection(-1);
+    // setDirection(-1);
     setCurrentFeedback((prev) =>
       prev === 0 ? feedbacks.length - 1 : prev - 1
     );

@@ -15,7 +15,7 @@ const Project = () => {
   const handleContact = () => {
     navigate("/contact");
   };
-  //   const [className, setclassName] = useState(""); // eslint-disable-line no-unused-vars
+  const [className, setclassName] = useState("");
   const [ques, setQues] = useState("");
   //   const changeId = (e) => { // eslint-disable-line no-unused-vars
   //     setclassName(e);
