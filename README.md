@@ -2,7 +2,7 @@
 
 🚀 **NeoByte: Modern Company Website UI**
 
-Welcome to **NeoByte** – a sleek, professional, and fully responsive user interface for a modern company or startup website. This project is a design-forward showcase of what a business web presence can look like in 2024, built with React and custom CSS.
+Welcome to **NeoByte** – a sleek, professional, and desktop first user interface for a modern company or startup website. This project is a design-forward showcase of what a business web presence can look like in 2024, built with React and custom CSS.
 
 > **Note:** This repository contains only the front-end UI. There is no backend or database integration. All pages and features are for demonstration and design inspiration purposes.
 
