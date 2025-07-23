@@ -39,7 +39,7 @@ Welcome to **NeoByte** – a sleek, professional, and desktop first user interfa
 4. Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 🌐 Live Demo
-[Add your deployed project link here]
+[[Visit the website](https://neobyte.netlify.app/)]
 
 ## 🤝 Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
